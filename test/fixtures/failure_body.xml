@@ -1,0 +1,254 @@
+http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>National Weather Service</title>
+<style type="text/css">
+#mainContainer
+{
+	width:auto;
+	height:auto;
+	background-color:white;
+}
+#headerArea
+{
+	margin-top:50px;
+	border:1px solid #cccccc;
+	height:125px;
+	background-color: #ffffff;
+}
+#nwsLogo
+{
+	float:left;
+	width:100px;
+	/*border:1px solid black;*/
+}
+#noaaLogo
+{
+	float:right;
+	width:100px;
+	/*border:1px solid black;*/
+}
+#logoTitleArea
+{
+
+	padding:15px;
+	height:110px;
+	/*border:1px solid black;*/
+	text-align:center;
+}
+#titleArea
+{
+	display:inline;
+    display: -moz-inline-stack;
+	color: black;
+    font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+	/*border:1px solid black;*/
+}
+
+#mainContent
+{
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	height:350px;
+	text-align:left;
+	padding:25px 65px 0px 60px;
+	font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size:14px;
+}
+#footerContainer
+{
+	border-left:1px solid #cccccc;
+	border-right:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+	border-top:1px solid #cccccc;
+	margin:0px;
+	padding:0px 20px 0px 20px;
+	height:110px;
+	width:auto;
+}
+#policySection ul, #disclaimerSection ul, #addressSection ul
+{
+    list-style-type:none;
+}
+#addressSection
+{
+	float:left;
+	font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	width:375px;
+	padding-right:100px;
+}
+#disclaimerSection
+{
+	font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+	float:left;
+	font-size:12px;
+	width:150px;
+	padding-right:100px;
+}
+#policySection
+{
+	font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+	float:left;
+	font-size:12px;
+}
+
+#linkContainerArea
+{
+	border:1px solid #000078;
+	height:190px;
+	width:900px;
+}
+
+#linkArea1, #linkArea2
+{
+	/*border:1px solid black;*/
+	height:170px;
+	margin:10px;
+	float:left;
+	width:auto;
+	text-align:left;
+	padding:5px 0px 0px 10px;
+}
+
+a:active, a:visited, a:link
+{
+	color:blue;
+}
+a:hover
+{
+	color:green;
+}
+
+#textLink
+{
+	font-size:12px;
+}
+</style>
+
+<script type="text/javascript">
+function goToSelectedPage(data)
+{
+	window.open(data);
+}
+
+function getMyTime()
+{
+	var myDate = new Date();
+	document.getElementById('myTime').innerHTML = myDate;
+	browserDetection();
+}
+function browserDetection()
+{
+	if(/MSIE (\\d+\\.\\d+);/.test(navigator.userAgent))
+	{
+		var version = new Number(RegExp.$1);
+		if(version < 8)
+		{
+			document.getElementById('noaaLogo').style.marginTop = '-45px';
+			document.getElementById('footerContainer').style.paddingTop = '10px';
+		}
+	}
+}
+</script>
+</head>
+
+<body onload="getMyTime();" style="background-color:#F0F2F7;">
+<div id="mainContainer">
+
+	<div id="headerArea">
+		<div id="logoTitleArea">
+			<div id="nwsLogo">
+				<img src="http://dev.nids.noaa.gov/error_nws/nws_logo.gif"  alt="NWS LOGO" title="NWS LOGO" width="94px" height="94px"></img>
+			</div>
+			<div id="titleArea">
+				National Weather Service
+			</div>
+
+			<div id="noaaLogo">
+				<img src="http://dev.nids.noaa.gov/error_nws/nws_logo.png" alt="NOAA LOGO" title="NOAA LOGO"></img>
+			</div>
+		</div>
+	</div>
+	<div id="mainContent">
+		<span id="myTime" style="font-size:10px;"></span>
+		<p>
+			The page you requested cannot be found.  Please check your URL and try again.
+		</p>
+		<p>
+			Please use the following links for NWS forecasts and services.
+		</p>
+		<div id="linkContainerArea">
+			<div id="linkArea1">
+				<p>
+					Forecasts:<br />
+					<a id="textLink" href="http://forecast.weather.gov/zipcity.php" target="_blank">http://forecast.weather.gov/zipcity.php</a><br />
+					<i style="font-size:11px;font-weight:bold;font-style:italic;">*Please type your zip code into the search box</i>
+				</p>
+				<p>
+					Radar:<br />
+					<a id="textLink" href="http://radar.weather.gov" target="_blank">http://radar.weather.gov</a>
+				</p>
+                                <p>
+                                        Air Quality:<br />
+                                        <a id="textLink" href="http://airquality.weather.gov" target="_blank">http://airquality.weather.gov</a>
+                                </p>
+
+			</div>
+			<div id="linkArea2">
+				<p>
+					Aviation:<br />
+					<a id="textLink" href="http://aviationweather.gov/" target="_blank">http://aviationweather.gov</a>
+				</p>
+				<p>
+					River and Lake Forecasts and Observations:<br />
+					<a id="textLink" href="http://water.weather.gov" target="_blank" id="textLink">http://water.weather.gov</a>
+				</p>
+                                <p>
+                                        Graphical Forecasts:<br />
+                                        <a id="textLink" href="http://graphical.weather.gov" target="_blank" id="textLink">http://graphical.weather.gov</a>
+                                </p>
+
+			</div>
+
+		</div><br />
+		<p>We apologize for any inconvenience that this might cause.</p>
+	</div>
+	<div id="footerContainer">
+
+		<div id="addressSection">
+			<ul>
+				<li>National Weather Service</li>
+				<li>Office of Operational Systems</li>
+				<li>&nbsp;</li>
+				<li>Page Author: NWS Webmaster</li>
+				<li>Web Master's E-mail: <a href="mailto:w-nws.webmaster@noaa.gov">w-nws.webmaster@noaa.gov</a></li>
+			</ul>
+		</div>
+
+		<div id="disclaimerSection">
+			<ul>
+				<li><a href="http://www.weather.gov/disclaimer.php" target="_blank">Disclaimer</a></li>
+				<li><a href="http://www.weather.gov/credits.php" target="_blank">Credits</a></li>
+				<li><a href="http://www.weather.gov/glossary/" target="_blank">Glossary</a></li>
+			</ul>
+		</div>
+
+		<div id="policySection">
+			<ul>
+				<li><a href="http://www.weather.gov/privacy.php" target="_blank">Privacy Policy</a></li>
+				<li><a href="http://www.weather.gov/admin.php" target="_blank">About Us</a></li>
+				<li><a href="http://www.weather.gov/careers.php" target="_blank">Career Opportunities</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+</div>
+
+</body>
+</html>
+
+
