@@ -1,7 +1,11 @@
 defmodule Weather do
-  def init(state) do
+  def init(state \\ %{}) do
     :inets.start()
     {:ok, state}
+  end
+
+  def fetch_and_parse(code) do
+    fetch_data(code) |> handle_response
   end
 
   def fetch_data(code) do
