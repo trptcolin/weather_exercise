@@ -21,7 +21,8 @@ iex(2)> Weather.fetch_and_parse("KAHN")
 
 ## Directions
 
-1. Read and understand the intended API (using `GenServer`) for Étude 12-1 (see link above), and complete the rest, including setting up a supervisor to restart the server upon crashes.
+1. Read and understand the intended API (using `GenServer`) for Étude 12-1 (see link above - there are 2 separate example REPL sessions to ensure are working). Complete the rest of this one, including setting up a supervisor to restart the server upon crashes.
+  - You'll want to make sure you really understand how [handle_call](https://hexdocs.pm/elixir/GenServer.html#c:handle_call/3) and [handle_cast](https://hexdocs.pm/elixir/GenServer.html#c:handle_cast/2) manage state in order to get all the pieces put together.
 2. Provide the wrapper API requested by Étude 12-2.
 3. Pull the server and client apart, as directed by Étude 12-3.
 
